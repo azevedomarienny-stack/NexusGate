@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marienny Azevedo">
+    <link rel="stylesheet" href="style.css">
+    <title>NexusGate Tela Principal</title>
+</head>
+<body>
+    <h2>NexusGate — Tela Principal</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Requisições totais</h3>
+            <p id="totalReq">-</p>
+        </div>
+
+        <div class="card">
+            <h3>Erros</h3>
+            <p id="totalErr">-</p>
+        </div>
+
+        <div class="card">
+            <h3>Conexões ativas</h3>
+            <p id="activeConn">-</p>
+        </div>
+
+        <div class="card">
+            <h3>Latência média (ms)</h3>
+            <p id="avgLat">-</p>
+        </div>
+
+    </div>
+
+    <canvas id="latencyChart" height="80"></canvas>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Backend</th>
+                <th>Status</th>
+                <th>Requisições</th>
+            </tr>
+        </thead>
+    <tbody id="backendRows"></tbody>
+    </table>
+    
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+<div id="debugLog"></div>
+</body>
+</html>
