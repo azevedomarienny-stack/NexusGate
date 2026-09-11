@@ -22,21 +22,27 @@ Sistemas com múltiplos servidores backend precisam de algo que distribua carga 
                  |
     [ NexusGate — Nucleo em C++ ]
 
-┌─────────────────────────────────────┐
-│ TCP Listener (Winsock2) │
-│ Thread Pool (4 workers) │
-│ Rate Limiter (por IP) │
-│ Load Balancer (round-robin) │
-│ Health Check Manager (thread) │
-│ Metrics Collector │
-│ HTTP Server (/metrics, API key) │
-└─────────────────────────────────────┘
-| | |
-[Backend 1] [Backend 2] [Backend N]
-|
-[ SQLite: eventos + snapshots ]
-|
-[ Dashboard Web (HTML/JS/Chart.js) ]
+```text
+      [ NexusGate - Núcleo em C++ ]
+  ┌─────────────────────────────────┐
+
+  | TCP Listener (Winsock2)         |
+  | Thread Pool (4 workers)         |
+  | Rate Limiter (por IP)           |
+  | Load Balancer (round-robin)     |
+  | Health Check Manager (thread)   |
+  | Metrics Collector               |
+  | HTTP Server (/metrics, API key) |
+  └─────────────────────────────────┘
+
+                | | |
+  [Backend 1] [Backend 2] [Backend N]
+                 |
+   [ SQLite: eventos + snapshots ]
+                 |
+ [ Dashboard Web (HTML/JS/Chart.js) ]
+```
+
 
 
 ## Tecnologias
