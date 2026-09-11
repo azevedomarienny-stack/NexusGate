@@ -2,6 +2,8 @@
 
 Load balancer / reverse proxy TCP de alta performance escrito em C++, com balanceamento de carga, health checks automáticos, métricas em tempo real e persistência histórica em SQLite.
 
+> Guia detalhado de instalação e execução: [GETTING_STARTED.md](GETTING_STARTED.md)
+
 ## O problema
 
 Sistemas com múltiplos servidores backend precisam de algo que distribua carga de forma inteligente, detecte automaticamente quando um servidor cai, e dê visibilidade sobre a saúde e performance do sistema em tempo real.
